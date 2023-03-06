@@ -1,0 +1,13 @@
+package chap_09;
+
+import chap_09.coffee.CoffeeByNumber;
+
+public class _02_GenericClass {
+
+	public static void main(String[] args) {
+		CoffeeByNumber c1 = new CoffeeByNumber(33);
+		c1.ready();
+
+	}
+
+}

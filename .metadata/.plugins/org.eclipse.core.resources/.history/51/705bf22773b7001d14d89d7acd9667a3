@@ -1,0 +1,18 @@
+package chap_07;
+
+import javax.management.AttributeChangeNotification;
+
+import chap_07.camera.ActionCam;
+
+public class _17_Final {
+
+	public static void main(String[] args) {
+		// Final
+		ActionCam actionCam = new ActionCam();
+		actionCam.recordVideo();
+		actionCam.makeVideo();
+		
+
+	}
+
+}

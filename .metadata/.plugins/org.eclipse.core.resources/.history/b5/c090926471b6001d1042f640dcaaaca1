@@ -1,0 +1,51 @@
+<%@ page  contentType="text/html; charset=UTF-8"%>
+
+<%
+	final String ID = "longlee";
+	final String PASSWD = "6789";
+
+	if(request.getMethod().equals("POST")){
+		String id = request.getParameter("id");
+		String passwd = request.getParameter("passwd");
+		
+		if(id != null && id.equals(ID) && passwd != null && passwd.equals(PASSWD)){
+			session.setAttribute("userId",id);
+			response.sendRedirect("selProduct.jsp");
+		}
+	}
+	else if(request.getMethod().equals("GET") || 
+			(request.getMethod().equals("POST") && session.getAttribute("userId") == null )){
+		
+	
+%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>login.jsp</title>
+</head>
+
+<body>
+
+	<h1>로그인</h1>
+	<hr />
+	
+	<form mathod="POST">
+	<fieldset>
+		<legend>로그인</legend>
+		<label for="id">ID</label>
+		<input type = "text" name="id" id="id" />
+		<label for="Passwd">Passwd</label>
+		<input type = "password" name="Passwd" id="Passwd" />
+		<input type="submit" value="login" />
+	</fieldset>
+	</form>
+
+</body>
+</html>
+
+<%
+	}
+%>	

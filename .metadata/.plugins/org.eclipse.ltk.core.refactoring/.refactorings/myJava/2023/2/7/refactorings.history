@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ojdbc.jdbcTest&apos; to &apos;JdbcTest&apos;&#x0D;&#x0A;- Original project: &apos;myJava&apos;&#x0D;&#x0A;- Original element: &apos;ojdbc.jdbcTest&apos;&#x0D;&#x0A;- Renamed element: &apos;ojdbc.JdbcTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;jdbcTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ojdbc{jdbcTest.java[jdbcTest" matchStrategy="1" name="JdbcTest" qualified="false" references="true" similarDeclarations="false" stamp="1676530081382" textual="false" version="1.0"/>
+</session>

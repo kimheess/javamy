@@ -1,0 +1,18 @@
+package mvc.twitter;
+
+import java.util.ArrayList;
+
+public class CartBean {
+	
+	private final String ID = "longlee";
+	private final String PASSWD = "6789";
+	ArrayList<String> products;
+	
+	public CartBean() {						//CartBean 장바구니 가지고 있음 
+		products = new ArrayList<String>();
+	}
+	
+	public boolean checkLogin(String id,String passwd) {
+		
+	}
+}

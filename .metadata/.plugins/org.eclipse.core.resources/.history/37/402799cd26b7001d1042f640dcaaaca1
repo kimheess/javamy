@@ -1,0 +1,25 @@
+<%@ page  contentType="text/html; charset=UTF-8"
+		  import="chap07.LoginBean"
+%>
+
+<%
+	LoginBean  loginBean = new LoginBean();
+%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+</head>
+
+<body>
+
+	<h1>로그인 결과</h1>
+	<hr /> 
+	
+			
+
+</body>
+</html>

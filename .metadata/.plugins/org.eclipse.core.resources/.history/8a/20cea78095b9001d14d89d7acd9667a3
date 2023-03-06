@@ -1,0 +1,16 @@
+<%@ page  contentType="text/html; charset=UTF-8"%>
+
+<jsp:useBean id="bean" class="mvc.cart.CartBean" scope="session" />
+
+<%
+	if(request.getMethod().equals("POST")){
+		request.setCharacterEncoding("UTF-8");
+	}
+
+	String command = request.getParameter("command");
+	String viewPath = "/WEB-INF/views/cart2/";
+	
+	if(session.getAttribute("id") == null){ //로그인 상태
+		
+	}
+%>

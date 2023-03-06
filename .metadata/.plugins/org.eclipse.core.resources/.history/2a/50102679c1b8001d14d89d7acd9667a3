@@ -1,0 +1,5 @@
+package mvc.twitter;
+
+public class TwitterLoginDO {
+
+}

@@ -1,0 +1,13 @@
+package chap_10;
+
+public class _01_AnonymousClass1 {
+	public static void main(String[] args) {
+		//익명 클래스
+	}
+}
+
+class Coffee{
+	public void order(String coffee) {
+		System.out.println("주문하신 " + coffee + " 나왔습니다.");
+	}
+}

@@ -1,0 +1,24 @@
+package chap04;
+
+public class Gugudan2 {
+
+	/*
+	 2단부터 9단 까지의 구구단의 결과를 출력하는 코드를 작성하세요.
+	 단, 중첩 반복문은 사용할 수 없고 하나의 for 반복문만 사용합니다.
+	 [실행 예]
+	 
+	 2 * 1 = 2 
+	 2 * 2 = 4 
+	 . . . 
+	 9 * 9 = 91 
+	 */
+	
+	public static void main(String[] args) {
+		int j=0;
+		for(int i=2; i<=9; i++) {
+			
+			System.out.printf("%d * %d = ", i , j);
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+<%@ page  contentType="text/html; charset=UTF-8"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>pageControlEnd.jsp</title>
+</head>
+
+<body>
+	
+	<h1>forward &amp; redirect 결과</h1>
+	<hr />
+
+
+
+</body>
+</html>

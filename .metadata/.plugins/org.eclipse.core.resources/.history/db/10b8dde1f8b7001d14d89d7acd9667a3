@@ -1,0 +1,11 @@
+package chap_09.coffee;
+
+public class CoffeeByName {
+	public Object name;
+	
+	public CoffeeByName(Object name) {
+		this.name = name;
+	}
+	
+	
+}

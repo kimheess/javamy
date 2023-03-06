@@ -1,0 +1,45 @@
+package mvc.twitter;
+
+import java.sql.*;
+
+public class TwitterDAO {
+	private Connection conn = null;
+	private Statement stmt = null;
+	private PreparedStatement pstmt = null;
+	private ResultSet rs = null;
+	private String sql = null;
+	
+	public TwitterDAO()  {
+		String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
+		String jdbc_url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String user = "scott";
+		String pwd = "tiger";
+		
+		try {
+			Class.forName(jdbc_driver);
+			conn = DriverManager.getConnection(jdbc_url, user, pwd);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public TwitterLoginDO checkLogin(TwitterLoginDO loginDO) {
+		TwitterLoginDO result = null;
+		
+		return result;
+	}
+	
+	
+	public void closeConnection() {
+		try{
+			if(!conn.isClosed()){
+				conn.close();
+			}
+		}
+	
+		catch (SQLException e) {
+		e.printStackTrace();
+		}	
+	}
+}

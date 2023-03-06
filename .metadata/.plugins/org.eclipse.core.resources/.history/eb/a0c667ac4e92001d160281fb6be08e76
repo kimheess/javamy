@@ -1,0 +1,24 @@
+package chap04;
+
+class FlowEx26 {
+	public static void main(String[] args) { 
+		
+//		1부터 100까지의 합은 5050입니다. 그렇다면 1부터 몇까지의 합이 최초로 1000을 초과하는 값일까요?
+		
+		
+		int i = 0;
+		int sum = 0;
+		
+		while(i+sum< 1000) {
+			System.out.printf("%d = %d%n", i, sum);
+			sum=i;
+			i++;
+		}
+//		int sum = 0;
+//		int i   = 0;
+//
+//		while((sum += ++i) <= 100) { // i를 1씩 증가시켜서 sum에 계속 더해나간다.
+//			System.out.printf("%d - %d%n", i, sum);
+//		}
+	} // main의 끝
+}

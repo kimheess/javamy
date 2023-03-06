@@ -1,0 +1,8 @@
+package chap08;
+
+public class jdbcTestDO {
+	private String username;
+	private String email;
+	
+	public 
+}

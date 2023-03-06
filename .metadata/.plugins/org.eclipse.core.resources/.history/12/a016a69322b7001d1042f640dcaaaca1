@@ -1,0 +1,11 @@
+package chap07;
+
+public class LoginBean {
+	
+	private String id;
+	private String passwd;
+	
+	public LoginBean() {
+	}
+	
+}

@@ -1,0 +1,15 @@
+package chap02;
+
+public class Test {
+
+	public static void main(String[] args) {
+			int i = 65;
+			char c = (char)i;
+			
+			System.out.println(c);
+			System.out.println(i);
+			System.out.println(i);
+			
+	}
+
+}

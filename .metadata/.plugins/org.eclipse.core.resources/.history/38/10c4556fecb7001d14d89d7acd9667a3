@@ -1,0 +1,11 @@
+package chap08;
+
+public class _02_Interface {
+
+	public static void main(String[] args) {
+		// 인터페이스
+		// 상속(extends) //단일 상속
+		
+	}
+
+}

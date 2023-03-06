@@ -1,0 +1,17 @@
+package chap02;
+
+public class Test {
+
+	public static void main(String[] args) {
+			int 삶;
+			삶 = 100;
+			
+			System.out.println(삶);
+			
+			
+			String str = new String("abc");
+			
+			
+	}
+
+}

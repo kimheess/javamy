@@ -1,0 +1,19 @@
+package chap01;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello. World ...!");
+		System.out.println("안녕, 세상아 ...!");
+		
+		int i = 5;
+		int y = 10;
+		if(i>y) {
+			System.out.println("i의 값이 y보다 큽니다");
+		}else(i<y){
+			System.out.println("y의 값이 i보다 큽니다");
+		}
+		
+	}
+}

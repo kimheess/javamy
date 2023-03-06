@@ -1,0 +1,15 @@
+package chap_10;
+
+
+
+public class _02_AnonymousClass2 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+abstract class HomeMadeBurger{
+	public abstract void cook();
+}

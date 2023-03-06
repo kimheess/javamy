@@ -1,0 +1,5 @@
+create twitter_login (
+	id 		varchar2(20) constraint twitter_login_id_pk primary key,
+	psswd 	varchar2(20) constraint twitter_login_passwd_nn not null,
+	name		varchar2(15) constraint twitter_login_name_nn not null,
+);

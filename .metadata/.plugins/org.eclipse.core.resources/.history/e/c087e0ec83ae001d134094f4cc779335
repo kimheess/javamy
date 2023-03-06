@@ -1,0 +1,103 @@
+package ojdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/*
+  	EMP 테이블에서 사원번호 7698(BLAKE) 사원과 BLAKE 사원의 모든 부하 직원들을 함께 삭제하는
+  	코드를 작성 하세요
+  	
+  	1)EMP.MGR 컬럼에 FK 제약 조건 추가
+  	ALTER TABLE EMP ADD CONSTRAINT EMP_EMPNO_PK PRIMARY KEY (EMPNO);
+	ALTET TABLE EMP 	ADD CONSTRAINT EMP_MGR_FK FOREIGN KEY (MGR) REFERENCES EMP (EMPNO);
+	alter table emp add constraint emp_mgr_fk foreign key (mgr) references emp (empno);
+*	
+*	2)사원 번호 7698(BLAKE) 사원 삭제 
+*	select * from emp where mgr = 7698;
+*
+*	delete from emp where mgr = 7698;
+*
+*	delete from emp where empno = 7698;
+*
+*/
+public class TransactionTest {
+	Connection conn;
+	Statement stmt;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	String sql;
+	
+	public TransactionTest() {
+		String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
+		String jdbc_url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String user = "scott";
+		String pwd = "tiger";
+		
+		try {
+			Class.forName(jdbc_driver);
+			this.conn = DriverManager.getConnection(jdbc_url, user, pwd);
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void dynamicSelect(){
+		this.sql = "select * from emp where mgr = ?;";
+		
+		
+		try {
+			this.pstmt = conn.prepareStatement(sql);
+			this.pstmt.setInt(1, 7698);
+			
+			this.rs = this.pstmt.executeQuery();
+			
+			
+			if(rs.next()) {
+				System.out.println(this.rs.getInt("empno") + "\t"+ this.rs.getString("ename")
+				+ "\t" + this.rs.getString("job") +"\t" + this.rs.getInt("mgr") + "\t" + this.rs.getDate("hiredate") + "/t" +
+				this.rs.getDouble("sal") + "\t" + this.rs.getInt("comm") + "\t" + this.rs.getInt("deptno"));
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		finally {
+			try {
+				if(!this.pstmt.isClosed()) {
+					this.pstmt.close();
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	public void closeConnection() {
+		try {
+			if(!this.conn.isClosed()) {
+				this.conn.close();
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		TransactionTest ts = new TransactionTest();
+		
+		ts.dynamicSelect();
+		
+		ts.closeConnection();
+
+	}
+
+}

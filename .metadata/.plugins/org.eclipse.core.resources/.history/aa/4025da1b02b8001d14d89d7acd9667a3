@@ -1,0 +1,23 @@
+package chap_09;
+
+import java.util.ArrayList;
+
+public class _04_ArrayList {
+
+	public static void main(String[] args) {
+		// 컬렉션 프레임워크 (List,Set,Map)
+		ArrayList<String> list = new ArrayList<>();
+		
+		//데이터 추가
+		list.add("유재석");
+		list.add("조세호");
+		list.add("김종국");
+		list.add("박명수");
+		list.add("강호동");
+		
+		//데이터 조회(인덱스)
+		System.out.println(list.get(0));
+	}
+		
+
+}

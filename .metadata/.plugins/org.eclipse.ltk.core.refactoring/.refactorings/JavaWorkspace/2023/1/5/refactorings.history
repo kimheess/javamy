@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;chap_07._02_Ins&apos; to &apos;_02_InstanceVariables&apos;&#x0D;&#x0A;- Original project: &apos;JavaWorkspace&apos;&#x0D;&#x0A;- Original element: &apos;chap_07._02_Ins&apos;&#x0D;&#x0A;- Renamed element: &apos;chap_07._02_InstanceVariables&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;_02_Ins&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;chap_07{_02_Ins.java[_02_Ins" matchStrategy="1" name="_02_InstanceVariables" qualified="false" references="true" similarDeclarations="false" stamp="1675168202551" textual="false" version="1.0"/>
+</session>

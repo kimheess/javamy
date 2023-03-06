@@ -1,0 +1,11 @@
+package mvc.twitter;
+
+public class CartBean {
+	
+	private final String ID = "longlee";
+	private final String PASSWD = "6789";
+	
+	public CartBean() {
+		
+	}
+}

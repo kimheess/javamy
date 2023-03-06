@@ -1,0 +1,46 @@
+package ojdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class JdbcTransaction {
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	String sql;
+	
+	public JdbcTransaction() {
+		String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
+		String jdbc_url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String user = "scott";
+		String pwd = "tiger";
+		
+		try {
+			Class.forName(jdbc_driver);
+			this.conn = DriverManager.getConnection(jdbc_url, user, pwd);
+			conn.setAutoCommit(false);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void closeConnection() {
+		try {
+			if(!this.conn.isClosed()) {
+				this.conn.close();
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

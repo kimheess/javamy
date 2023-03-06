@@ -1,0 +1,21 @@
+package chap_07;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+public class _18_Enum {
+	public static void main(String[] args) {
+		// 열거형 (Enum)
+		// 달력 : JAN, FEB, MAR ...
+		// 옷 사이즈 : S, M, L, XL 
+		// 해상도 : HD, FHD, QHD, UHD, ...
+		
+		Resolution resolution = Resolution.HD;
+		System.out.println(resolution);
+		
+		
+	}
+}
+
+enum Resolution {
+	HD,FHD,UHD
+}

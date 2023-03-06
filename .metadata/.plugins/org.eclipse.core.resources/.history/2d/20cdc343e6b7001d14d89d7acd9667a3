@@ -1,0 +1,28 @@
+package chap_07;
+
+public class _Quiz_07 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Hamburger{
+	public String name;
+	
+	void Hamburger() {
+		this("햄버거");
+	}
+	public void cook() {
+		
+	}
+}
+
+class CheeseBurger{
+	
+}
+
+class ShirmpBurger{
+	
+}

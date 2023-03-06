@@ -1,0 +1,12 @@
+package chap02;
+
+public class Test {
+
+	public static void main(String[] args) {
+		double f = 0.01234567890123456789d;
+		
+		System.out.println(f);
+
+	}
+
+}

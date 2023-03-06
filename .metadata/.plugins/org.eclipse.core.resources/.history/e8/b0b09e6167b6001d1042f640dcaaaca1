@@ -1,0 +1,20 @@
+<%@ page  contentType="text/html; charset=UTF-8"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>applicatgion.jsp</title>
+</head>
+
+<body>
+
+	<h1>applicatgion 내장 객체 예제</h1>
+	<hr />
+	
+	<h4>서버 정보: <%= application.getServerInfo() %></h4>
+	<h4>Servlet API Version: <%= application.getMajorVersion() %>.<%= application.getMajorVersion() %></h4>
+	
+</body>
+</html>

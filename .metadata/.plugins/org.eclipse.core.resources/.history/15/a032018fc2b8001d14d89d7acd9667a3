@@ -1,0 +1,12 @@
+package mvc.twitter;
+
+public class TwitterLoginDO {
+	
+	private String id;
+	private String passwd;
+	private String name;
+	
+	public TwitterLoginDO() {
+		
+	}
+}

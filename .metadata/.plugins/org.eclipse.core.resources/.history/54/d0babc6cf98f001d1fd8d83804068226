@@ -1,0 +1,15 @@
+package chap02;
+
+public class Test {
+
+	public static void main(String[] args) {
+		long i = 12342222222222222L;
+		
+		System.out.println(i);
+		
+		boolean power = true;
+		System.out.println(power);
+		//
+	}
+
+}

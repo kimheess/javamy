@@ -1,0 +1,65 @@
+package ojdbc;
+
+import java.sql.*;
+/*
+ 	
+ 
+*/
+
+
+	public class JdbcEmp {
+		Connection conn;
+		PreparedStatement pstmt;
+		ResultSet rs;
+		String sql;
+		
+		public JdbcEmp() {
+			String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
+			String jdbc_url = "jdbc:oracle:thin:@localhost:1521:XE";
+			String user = "scott";
+			String pwd = "tiger";
+			
+			try {
+				Class.forName(jdbc_driver);
+				this.conn = DriverManager.getConnection(jdbc_url, user, pwd);
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		public void dynamicSelect(String username){
+			this.sql = "select empno, ename, sal, hiredate from wmp where empno = ?";
+			
+			try {
+				this.pstmt = conn.prepareStatement(sql);
+				this.pstmt.setString(1, username);
+				
+				this.rs = this.pstmt.executeQuery();
+				
+				// 사용자 이름이 고유하다고 가정!
+				if(this.rs.next()) {
+					jdbcTest = new JdbcTest(this.rs.getString("username"), this.rs.getString("email"));
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+			}	
+			finally {
+				try {
+					if(!this.pstmt.isClosed()) {
+						this.pstmt.close();
+					}
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			return jdbcTest;
+		}
+	public static void main(String[] args) {
+		
+
+	}
+}
+

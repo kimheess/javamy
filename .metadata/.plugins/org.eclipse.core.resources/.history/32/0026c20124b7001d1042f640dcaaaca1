@@ -1,0 +1,30 @@
+package chap07;
+
+public class LoginBean {
+	
+	private String id;
+	private String passwd;
+	
+	public LoginBean() {
+	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+	public String  getId() {
+		return this.id;
+	}
+	public String getPasswd() {
+	    return this.passwd;
+	}
+	
+	public boolean checkUser() {
+		final String ID ="longlee";
+		final String PWAASWD ="6789";
+	}
+}
+
+

@@ -1,0 +1,28 @@
+<%@ page  contentType="text/html; charset=UTF-8"%>
+
+<%
+	String script ="";
+
+	if(session.isNew()){
+		script += "<script>alert('세션 객체가 생성되었습니다'!)</script>";
+	}
+%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>session.jsp</title>
+</head>
+
+<body>
+
+
+	<h1>session 예제</h1>
+	<hr />
+	
+	
+	
+</body>
+</html>

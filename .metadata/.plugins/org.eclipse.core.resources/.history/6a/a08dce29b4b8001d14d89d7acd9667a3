@@ -1,0 +1,24 @@
+create table twitter_login (
+	id 		varchar2(20) constraint twitter_login_id_pk primary key
+,	psswd 	varchar2(20) constraint twitter_login_passwd_nn not null
+,	name	 	varchar2(15) constraint twitter_login_name_nn not null
+);
+
+insert into twitter_login
+values('longlee', '6789', '이성구');
+
+insert into twitter_login
+values('gdhong', '1234', '홍길동');
+
+insert into twitter_login
+values('yakim', '4567', '김연아');
+
+commit;
+
+select * from twitter_login;
+
+create table twitter(
+	id 		varchar2(20)
+,	message	varchar2(300)
+,	create_date date 
+);

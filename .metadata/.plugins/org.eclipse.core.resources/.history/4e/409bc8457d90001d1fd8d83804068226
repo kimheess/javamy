@@ -1,0 +1,33 @@
+package chap02;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int i; 
+		i=100;
+		
+		
+		System.out.println(i);
+		
+	//========정상적 리터럴 사용의 예============= 
+		//boolean power = true;
+		//char ch = 'A' 
+		//char tab = '\t';    ==> 
+		//byte b = 127;
+		//short s = 32767;
+		//int i = 100; 
+		//int oct = 0100;    ==> 0으로 시작하면 8진수 정수 
+		//int hex = 0x100;   ==> 0x으로 시작하면 16진수 정수
+		//long l = 10000000000L; 
+		//float f = 3.14f;
+		//double d = 3.14d;
+		//float f = 100f;
+		//10. ---> 10.0  더블 타입의 실수 
+		//.10 ---> 0.10  더블 타입의 실수
+		//10f ---> 10.0f float 타입의 실수 
+		//3.14e4f ---> 3140.0f  3.14*10의 3승 e는 지수값을 의미
+		//1e1 ---> 10.0 1*1의 10승 모든 과학적 표기법은 실수로 표현 정수로 표현 불가 
+		 
+	}
+
+}

@@ -1,0 +1,67 @@
+<%@ page  contentType="text/html; charset=UTF-8"
+		  import="java.util.*, mvc.twitter.*"
+%>
+
+
+<%
+	if(request.getMethod().equals("POST")){
+		request.setCharacterEncoding("UTF-8");
+	}	
+
+%>
+
+<jsp:useBean id="twitterDAO" class="mvc.twitter.TwitterDAO" scope="session" />
+<jsp:useBean id="twitterDO" class="mvc.twitter.TwitterDO" scope="page" />
+<jsp:useBean id="loginDO" class="mvc.twitter.TwitterLoginDO" scope="page"/>
+<jsp:setProperty name="twitterDO" property="message" />
+<jsp:setProperty name="loginDO" property="*" />
+
+
+<%
+	String viewPath = "/WEB-INF/views/twitter2/"; //-> 뷰의 위치 
+	if(session.getAttribute("id") == null ){
+		if(request.getMethod().equals("GET")){ // -> (1)(로그인이 안됐는데 GET으로 요청이 왔음) =>(1) forward / twitterLogin 
+			pageContext.forward(viewPath + "twitterLogin.jsp");
+		}
+		else if(request.getMethod().equals("POST")){ //(2) 로그인 요청  성공 여부에 따라 화면이 달라짐
+			TwitterLoginDO tDO =  twitterDAO.checkLogin(loginDO);			// --> loginDO를 반환 이름 필요 
+			
+			if(tDO != null){							// 1)로그인 성공 시 
+				session.setAttribute("id",tDO.getId());
+				session.setAttribute("name",tDO.getName());
+			}
+			else{
+				
+			}
+		}
+	}
+	else {
+		
+	}
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
